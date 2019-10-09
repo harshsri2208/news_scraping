@@ -28,7 +28,7 @@ def get_news():
 	for news in all_news:
 		print(rowCount,") ",news.text)
 
-		Label(frame,justif=LEFT,text=news.text).grid(row=rowCount, sticky=W, columnspan=2)
+		Label(frame,justif=LEFT,text=str(rowCount)+") "+news.text).grid(row=rowCount, sticky=W, columnspan=2)
 
 		rowCount=rowCount+1
 
