@@ -14,8 +14,8 @@ soup=BeautifulSoup(res.text,'lxml')
 news_box=soup.find('ul',{'class':'itg-listing'})
 all_news=news_box.find_all('a')
 
-print("\nTop News Headlines from IndiaToday.com")
-print("--------------------------------------\n")
+#print("\nTop News Headlines from IndiaToday.com")
+#print("--------------------------------------\n")
 
 Label(root, text="Top News Headlines from IndiaToday.com", font="Verdana 10 bold").grid(row=0,columnspan=2)
 
@@ -26,7 +26,7 @@ def get_news():
 		widget.destroy()
 
 	for news in all_news:
-		print(rowCount,") ",news.text)
+		#print(rowCount,") ",news.text)
 
 		Label(frame,justif=LEFT,text=str(rowCount)+") "+news.text).grid(row=rowCount, sticky=W, columnspan=2)
 
